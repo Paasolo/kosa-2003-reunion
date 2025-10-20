@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-school.jpg";
-import kosaLogo from "@/assets/kosa-logo.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -27,12 +26,8 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <div className="space-y-4">
-            <div className="flex justify-center mb-6">
-              <img 
-                src={kosaLogo} 
-                alt="KOSA 2003 Logo" 
-                className="w-40 h-40 md:w-48 md:h-48 object-contain drop-shadow-2xl"
-              />
+            <div className="inline-block px-6 py-2 bg-secondary/20 backdrop-blur-sm rounded-full border border-secondary/30 mb-4">
+              <p className="text-secondary font-semibold tracking-wider">EST. 2003</p>
             </div>
             <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground leading-tight">
               KOSA 2003 BATCH
