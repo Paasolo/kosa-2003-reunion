@@ -2,7 +2,6 @@ const Stats = () => {
   const stats = [
     { number: "20+", label: "Years of Friendship" },
     { number: "100+", label: "Batch Members" },
-    { number: "5", label: "Reunions Held" },
     { number: "∞", label: "Memories Created" },
   ];
 
