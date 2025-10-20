@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import kosaLogo from "@/assets/kosa-logo.png";
 
 const Members = () => {
   const navigate = useNavigate();
@@ -89,7 +90,14 @@ const Members = () => {
             <ArrowLeft className="mr-2 h-5 w-5" />
             Back to Home
           </Button>
-          <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-4">
+          <div className="flex justify-center mb-6">
+            <img 
+              src={kosaLogo} 
+              alt="KOSA 2003 Logo" 
+              className="w-32 h-32 md:w-40 md:h-40 object-contain drop-shadow-2xl"
+            />
+          </div>
+          <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-4 text-center">
             KOSA 2003 BATCH Members
           </h1>
           <p className="text-lg md:text-xl text-primary-foreground/90">
