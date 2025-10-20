@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Users } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/hero-school.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -43,19 +46,20 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="secondary"
-              onClick={() => scrollToSection('about')}
+              onClick={() => navigate('/members')}
               className="group font-semibold shadow-glow"
             >
-              Our Story
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <Users className="mr-2 h-5 w-5" />
+              View Members
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection('about')}
               className="bg-primary-foreground/10 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/20 font-semibold backdrop-blur-sm"
             >
-              Get in Touch
+              Our Story
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
         </div>
